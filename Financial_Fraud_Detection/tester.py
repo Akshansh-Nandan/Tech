@@ -870,7 +870,6 @@ test_cases = [
     },
 
     # --- SAFE: Everything matches like a boss ---
-    # TRANSACTION EXAMPLE FOR TESTING
     {
         "txn_amount": 280,
         "city": "Noida",
