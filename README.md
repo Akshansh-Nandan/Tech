@@ -13,3 +13,5 @@
  - Any type of vulnerability that is related with this branch is allowed.
 ### Rule #6
  - Please avoid harsh language
+## License
+The entire Repo is licensed under MIT License, and the Full_Stack branch is licensed under Apache 2.0 License, while the Science_or_Mathematics branch is licensed under GPLv3 License. All the Discussions are also licensed under CC BY-SA License and the General discussion is licensed under 3-Clause BSD License.
