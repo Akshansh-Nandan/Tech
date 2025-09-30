@@ -1,5 +1,5 @@
 # Tech
-**This respiratory discusses topics on IT. If you want to add any project files, you may free add it in their respective branch. If the respective branch doesn't exist, please reach out on the Main General Discussion channel**
+**This respiratory discusses topics on IT. If you want to add any project files, you may responsibly add it in their respective branch. If the respective branch doesn't exist, please reach out on the Main General Discussion channel**
 ## Rules
 ### Rule #1
  - No promoting harmful behavior or encouraging misuse of ideas.
