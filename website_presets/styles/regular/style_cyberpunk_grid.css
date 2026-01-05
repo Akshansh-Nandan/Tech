@@ -1,0 +1,165 @@
+/* ------------------------------------------------------------------- */
+/* Theme 22: Cyberpunk Grid - Dark, Neon, Technical, Digital */
+/* ------------------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Share+Tech+Mono&display=swap');
+
+:root {
+    --bg-color: #0d0d0d; /* Deep Black */
+    --primary-color: #00ff99; /* Electric Green Neon */
+    --secondary-color: #ff33cc; /* Cyber Pink Accent */
+    --accent-color: #2a2a2a; /* Grid/Circuit Line Gray */
+    --text-color: #e0e0e0;
+    --font-primary: 'Major Mono Display', monospace;
+    --font-secondary: 'Share Tech Mono', monospace;
+    --glow-effect: 0 0 8px var(--primary-color), 0 0 15px rgba(0, 255, 153, 0.4);
+    --border-scan: 1px dashed var(--accent-color);
+}
+
+body {
+    font-family: var(--font-secondary);
+    line-height: 1.4;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    scroll-behavior: smooth;
+    /* Simulate holographic scanlines */
+    background-image: linear-gradient(rgba(0,0,0,0) 50%, var(--primary-color) 50%);
+    background-size: 100% 4px;
+}
+
+/* Utility & Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+section {
+    padding: 60px 0;
+    /* Semi-transparent terminal window look */
+    background-color: rgba(10, 10, 10, 0.9);
+    border: 3px solid var(--primary-color);
+    box-shadow: var(--glow-effect);
+    margin: 30px 0;
+    border-radius: 0;
+}
+
+/* Titles */
+.section-title {
+    font-family: var(--font-primary);
+    font-weight: 400;
+    font-size: 4em;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    text-shadow: 0 0 5px var(--secondary-color);
+    border-bottom: 5px double var(--primary-color);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Header & Navigation */
+#header {
+    background: var(--bg-color);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    box-shadow: var(--glow-effect);
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+.logo {
+    font-family: var(--font-primary);
+    font-size: 2.2em;
+    font-weight: 400;
+    color: var(--primary-color);
+    text-shadow: 0 0 5px var(--primary-color);
+}
+
+#nav ul {
+    list-style: none;
+    display: flex;
+}
+
+#nav ul li a {
+    color: var(--text-color);
+    font-size: 1.0em;
+    padding: 10px 18px;
+    border: 1px solid var(--accent-color);
+    transition: all 0.3s;
+    border-radius: 2px;
+}
+
+#nav ul li a:hover {
+    color: var(--bg-color);
+    background: var(--secondary-color);
+    box-shadow: 0 0 5px var(--secondary-color);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    padding: 12px 35px;
+    border-radius: 2px;
+    font-size: 1.1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.2s;
+    border: 3px solid var(--secondary-color);
+    box-shadow: var(--glow-effect);
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 8px var(--secondary-color);
+}
+
+/* Menu/Content Structure */
+.menu-category, .contact-item {
+    padding: 30px;
+    background: #181818;
+    border: 1px solid var(--primary-color);
+    border-radius: 0;
+    box-shadow: 0 0 5px var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.menu-category h3 {
+    font-family: var(--font-primary);
+    color: var(--primary-color);
+    font-size: 2em;
+    border-bottom: var(--border-scan);
+    padding-bottom: 5px;
+}
+
+.menu-item {
+    border-bottom: var(--border-scan);
+    padding: 10px 0;
+}
+
+.item-name {
+    color: var(--text-color);
+    font-weight: 400;
+}
+.item-price {
+    color: var(--secondary-color);
+    font-weight: bold;
+    text-shadow: 0 0 2px var(--secondary-color);
+}
+
+/* Footer */
+#footer {
+    background: #000000;
+    color: var(--primary-color);
+    padding: 20px 0;
+    font-size: 0.9em;
+    border-top: 5px solid var(--primary-color);
+    box-shadow: var(--glow-effect);
+}
+
+

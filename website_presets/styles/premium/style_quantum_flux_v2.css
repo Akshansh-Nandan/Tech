@@ -1,0 +1,225 @@
+/* ------------------------------------------------------------------- */
+/* Theme 26: Quantum Flux v2 – Ultra Flashy, Animated, Futuristic AI  */
+/* ------------------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&family=Oxanium:wght@300;400;700&display=swap');
+
+:root {
+    --bg-color: #03010a; 
+    --primary-color: #00eaff; 
+    --secondary-color: #ff00d4; 
+    --accent-color: #6b4bff;
+    --text-color: #e5eaff;
+
+    --font-primary: 'Oxanium', sans-serif;
+    --font-secondary: 'Space Grotesk', sans-serif;
+
+    --glow-primary: 0 0 20px rgba(0, 234, 255, 0.7);
+    --glow-secondary: 0 0 20px rgba(255, 0, 212, 0.7);
+
+    --grad-1: linear-gradient(125deg, #00eaff, #6b4bff, #ff00d4);
+    --grad-2: linear-gradient(120deg, #04010d, #09031b 55%, #04010d);
+}
+
+/* BACKGROUND ANIMATED PARTICLES */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(circle at 20% 30%, rgba(0,234,255,0.18), transparent 60%),
+        radial-gradient(circle at 80% 80%, rgba(255,0,212,0.18), transparent 60%);
+    animation: bgFloat 12s infinite alternate ease-in-out;
+    z-index: -1;
+}
+
+@keyframes bgFloat {
+    from { transform: translateY(0px) scale(1); }
+    to { transform: translateY(-25px) scale(1.03); }
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: var(--font-secondary);
+    color: var(--text-color);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* QUANTUM WARP BACKGROUND EFFECT IN SECTIONS */
+section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(107,75,255,0.12), transparent 70%);
+    animation: warp 8s infinite ease-in-out alternate;
+    pointer-events: none;
+}
+
+@keyframes warp {
+    from { transform: scale(1) translateY(0); }
+    to { transform: scale(1.08) translateY(-10px); }
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 30px;
+}
+
+/* SECTION STYLING */
+section {
+    padding: 80px 0;
+    background: var(--grad-2);
+    border: 2px solid var(--primary-color);
+    box-shadow: var(--glow-primary);
+    margin: 40px 0;
+    border-radius: 22px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* TITLE */
+.section-title {
+    font-family: var(--font-primary);
+    font-size: 3.8em;
+    color: var(--primary-color);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+    text-shadow: var(--glow-primary);
+    border-bottom: 4px solid var(--secondary-color);
+    padding-bottom: 8px;
+    display: inline-block;
+    animation: titlePulse 3s infinite ease-in-out;
+}
+
+@keyframes titlePulse {
+    0% { text-shadow: 0 0 10px var(--primary-color); }
+    50% { text-shadow: 0 0 22px var(--secondary-color); }
+    100% { text-shadow: 0 0 10px var(--primary-color); }
+}
+
+/* HEADER */
+#header {
+    background: rgba(3,1,10,0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--primary-color);
+    box-shadow: 0 5px 25px rgba(0,234,255,0.25);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.logo {
+    font-family: var(--font-primary);
+    font-size: 2.9em;
+    color: var(--secondary-color);
+    text-shadow: var(--glow-secondary);
+    transition: 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+    text-shadow: 0 0 28px var(--secondary-color);
+}
+
+/* NAV */
+#nav ul {
+    display: flex;
+    list-style: none;
+}
+
+#nav ul li a {
+    padding: 10px 18px;
+    color: var(--text-color);
+    font-size: 1.2em;
+    transition: 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+#nav ul li a:hover {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    text-shadow: var(--glow-primary);
+}
+
+/* BUTTON WITH SHINY ANIMATION */
+.btn {
+    display: inline-block;
+    background: var(--grad-1);
+    padding: 14px 45px;
+    color: #000;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.15em;
+    box-shadow: var(--glow-secondary);
+    position: relative;
+    overflow: hidden;
+    transition: 0.25s;
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 60%;
+    background: rgba(255,255,255,0.3);
+    transform: skewX(-30deg);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% { left: -100%; }
+    50% { left: 150%; }
+    100% { left: 150%; }
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 28px var(--primary-color);
+}
+
+/* CARDS */
+.menu-category,
+.contact-item {
+    background: #0a0720;
+    border: 1px solid var(--accent-color);
+    border-radius: 12px;
+    padding: 35px;
+    box-shadow: var(--glow-secondary);
+    animation: float 6s infinite ease-in-out alternate;
+}
+
+@keyframes float {
+    from { transform: translateY(0px); }
+    to { transform: translateY(-8px); }
+}
+
+.menu-category h3 {
+    font-family: var(--font-primary);
+    font-size: 2.3em;
+    color: var(--secondary-color);
+    text-shadow: var(--glow-secondary);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 6px;
+}
+
+/* FOOTER */
+#footer {
+    background: #05020a;
+    color: #6b4bff;
+    text-align: center;
+    padding: 35px 0;
+    border-top: 5px solid var(--secondary-color);
+    font-size: 0.95em;
+}
+
+
+

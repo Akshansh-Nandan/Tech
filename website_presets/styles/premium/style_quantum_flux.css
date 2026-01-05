@@ -1,0 +1,195 @@
+/* ------------------------------------------------------------------- */
+/* Theme 25: Quantum Neon Flux – Dark, Futuristic, Hyper-Gradient, AI */
+/* ------------------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&family=Oxanium:wght@300;400;700&display=swap');
+
+:root {
+    --bg-color: #05030d; /* Deep Cosmic Black */
+    --primary-color: #00eaff; /* Neon Cyan Core */
+    --secondary-color: #ff00d4; /* Magenta Quantum Pulse */
+    --accent-color: #6b4bff; /* Purple Ion Glow */
+    --text-color: #e5eaff;
+    --font-primary: 'Oxanium', sans-serif; /* Futuristic angular */
+    --font-secondary: 'Space Grotesk', sans-serif;
+
+    --glow-primary: 0 0 15px rgba(0, 234, 255, 0.6);
+    --glow-secondary: 0 0 15px rgba(255, 0, 212, 0.6);
+    --border-glow: 2px solid var(--primary-color);
+
+    --grad-1: linear-gradient(135deg, #00eaff, #6b4bff 40%, #ff00d4 90%);
+    --grad-2: linear-gradient(120deg, #05030d, #0a0620 50%, #05030d);
+}
+
+/* GLOBAL */
+body {
+    font-family: var(--font-secondary);
+    line-height: 1.7;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    background-image: radial-gradient(
+        circle at 20% 30%,
+        rgba(0, 234, 255, 0.15),
+        transparent 60%
+    ),
+    radial-gradient(
+        circle at 80% 70%,
+        rgba(255, 0, 212, 0.15),
+        transparent 60%
+    );
+    background-attachment: fixed;
+    scroll-behavior: smooth;
+}
+
+/* Layout */
+.container {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+section {
+    padding: 75px 0;
+    background: var(--grad-2);
+    border: var(--border-glow);
+    box-shadow: var(--glow-primary);
+    margin: 30px 0;
+    border-radius: 18px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle,
+        rgba(255, 0, 212, 0.05),
+        transparent 70%
+    );
+    pointer-events: none;
+}
+
+/* Titles */
+.section-title {
+    font-family: var(--font-primary);
+    font-size: 3.2em;
+    margin-bottom: 25px;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: var(--glow-primary);
+    border-bottom: 4px solid var(--secondary-color);
+    display: inline-block;
+    padding-bottom: 6px;
+}
+
+/* Header & Nav */
+#header {
+    background: rgba(5, 3, 13, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 5px 20px rgba(0, 234, 255, 0.3);
+    border-bottom: var(--border-glow);
+    z-index: 100;
+}
+
+.logo {
+    font-family: var(--font-primary);
+    font-size: 2.7em;
+    font-weight: 700;
+    color: var(--secondary-color);
+    text-shadow: var(--glow-secondary);
+}
+
+#nav ul {
+    list-style: none;
+    display: flex;
+}
+
+#nav ul li a {
+    color: var(--text-color);
+    font-size: 1.15em;
+    padding: 10px 18px;
+    border-bottom: 2px solid transparent;
+    transition: 0.25s;
+    font-family: var(--font-secondary);
+}
+
+#nav ul li a:hover {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    text-shadow: var(--glow-primary);
+}
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    background: var(--grad-1);
+    color: #000;
+    padding: 14px 40px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 2px solid var(--primary-color);
+    box-shadow: var(--glow-secondary);
+    transition: 0.25s;
+}
+
+.btn:hover {
+    box-shadow: 0 0 22px var(--primary-color);
+    transform: translateY(-3px);
+}
+
+/* Cards / Content Blocks */
+.menu-category,
+.contact-item {
+    padding: 35px;
+    background: #0b0820;
+    border: 1px solid var(--accent-color);
+    border-radius: 12px;
+    box-shadow: var(--glow-secondary);
+    backdrop-filter: blur(6px);
+}
+
+.menu-category h3 {
+    font-family: var(--font-primary);
+    color: var(--secondary-color);
+    font-size: 2.2em;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+    text-shadow: var(--glow-secondary);
+}
+
+.menu-item {
+    border-bottom: 1px dotted var(--accent-color);
+    padding: 10px 0;
+}
+
+.item-name {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.item-price {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+/* Footer */
+#footer {
+    background: #04020a;
+    color: #6b4bff;
+    padding: 30px 0;
+    font-size: 0.9em;
+    border-top: 5px solid var(--secondary-color);
+    text-align: center;
+}
+
+
+

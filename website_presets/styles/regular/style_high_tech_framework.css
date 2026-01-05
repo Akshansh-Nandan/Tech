@@ -1,0 +1,149 @@
+/* ------------------------------------------------------------------- */
+/* Theme 06: High-Tech Wireframe - Minimalist, Grid, Monochromatic */
+/* ------------------------------------------------------------------- */
+
+:root {
+    --bg-color: #000000;
+    --primary-color: #ffffff; /* White base color */
+    --secondary-color: #00ff66; /* Bright Green Accent */
+    --text-color: #e0e0e0;
+    --font-primary: 'Consolas', 'Monospace', monospace;
+    --grid-line: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body {
+    font-family: var(--font-primary);
+    line-height: 1.4;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    scroll-behavior: smooth;
+    /* Wireframe Grid Overlay */
+    background-image: 
+        linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+/* Utility & Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    border-left: 1px solid var(--secondary-color);
+    border-right: 1px solid var(--secondary-color);
+}
+
+section {
+    padding: 70px 0;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+/* Titles */
+.section-title {
+    font-size: 4em;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    border-bottom: 5px solid var(--secondary-color);
+    display: inline-block;
+    padding-bottom: 5px;
+    text-shadow: 0 0 5px var(--secondary-color);
+}
+
+/* Header & Navigation */
+#header {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid var(--primary-color);
+    box-shadow: 0 0 10px rgba(0, 255, 102, 0.5);
+}
+
+.logo {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+}
+
+#nav ul {
+    list-style: none;
+    display: flex;
+}
+
+#nav ul li a {
+    color: var(--primary-color);
+    font-size: 1.1em;
+    padding: 5px 10px;
+    border: 1px solid var(--text-color);
+    transition: all 0.2s;
+}
+
+#nav ul li a:hover {
+    color: var(--bg-color);
+    background: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--secondary-color);
+    padding: 12px 30px;
+    border-radius: 0;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    border: 3px solid var(--secondary-color);
+    box-shadow: 0 0 10px var(--secondary-color);
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+    box-shadow: none;
+}
+
+/* Menu/Content Structure */
+.menu-category, .contact-item {
+    padding: 30px;
+    background: transparent;
+    border: 1px solid var(--primary-color);
+    border-radius: 0;
+    margin-bottom: 20px;
+}
+
+.menu-category h3 {
+    color: var(--secondary-color);
+    font-size: 2em;
+    border-bottom: 1px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+
+.menu-item {
+    border-bottom: 1px dashed var(--text-color);
+}
+
+.item-name {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+.item-price {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+/* Footer */
+#footer {
+    background: var(--bg-color);
+    color: var(--text-color);
+    padding: 20px 0;
+    font-size: 0.9em;
+    border-top: 5px double var(--secondary-color);
+}
+
+

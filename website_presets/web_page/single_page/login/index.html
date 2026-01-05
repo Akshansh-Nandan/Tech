@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Universal Login — Quantum Flux Compatible</title>
+
+    <link rel="stylesheet" href="../../../styles/premium/style_quantum_flux_v2.css">
+    <script src="../../../scripts/script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const f = document.querySelector('form.demo-login');
+            if (f) f.addEventListener('submit', (e) => { 
+                e.preventDefault(); 
+                alert('Demo login submitted'); 
+            });
+            
+            const card = document.querySelector('.login-card');
+            if (!card) return;
+
+            // Read rendered card bg
+            const bg = getComputedStyle(card).backgroundColor;
+            const rgb = bg.match(/\d+/g)?.map(Number);
+            if (!rgb) return;
+
+            // Brightness formula
+            const brightness = rgb[0] * 0.299 + rgb[1] * 0.587 + rgb[2] * 0.114;
+            const isDark = brightness < 140;
+
+            // Auto colors
+            const textColor = isDark ? "#ffffff" : "#000000";
+            const titleColor = isDark ? "#ffffff" : "#111111";
+            const linkColor = isDark ? "#63caff" : "#005bbb";
+            const borderColor = isDark ? "rgba(255,255,255,0.35)" : "rgba(0,0,0,0.35)";
+            const buttonText = isDark ? "#ffffff" : "#000000";
+
+            // 1. Titles (h1, h2, etc.)
+            document.querySelectorAll('h1, h2, h3, h4, h5, h6, .login-title')
+                .forEach(el => el.style.color = titleColor);
+
+            // 2. Normal text (labels, spans, p, etc.)
+            document.querySelectorAll('p, span, label, .login-text, .login-meta')
+                .forEach(el => el.style.color = textColor);
+
+            // 3. Links (forgot password, sign up, header links, ALL)
+            document.querySelectorAll('a')
+                .forEach(link => {
+                    link.style.color = linkColor;
+                    link.style.textDecorationColor = linkColor;
+                });
+
+            // 4. Inputs (borders + text)
+            document.querySelectorAll('input')
+                .forEach(input => {
+                    input.style.color = textColor;
+                    input.style.borderColor = borderColor;
+                });
+
+            // 5. Card border
+            card.style.borderColor = borderColor;
+
+            // 6. Buttons (only text recolor)
+            document.querySelectorAll('button, .btn')
+                .forEach(btn => btn.style.color = buttonText);
+
+            // 7. Checkbox fix (Remember me)
+            const check = document.querySelector('input[type="checkbox"]');
+            if (check) {
+                check.style.accentColor = isDark ? "#ffffff" : "#000000";
+            }
+
+            // 8. Small text / helper text / captions
+            document.querySelectorAll('.forgot-link, small, .sub-text')
+                .forEach(el => el.style.color = linkColor);
+        });
+    </script>
+
+    <!-- UNIVERSAL OVERRIDES — safe with all themes -->
+    <style>
+        html, body, .login-wrapper, .login-card, .login-card * {
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background-color: var(--bg-color);
+            font-family: var(--font-secondary);
+            color: var(--text-color);
+            margin: 0;
+        }
+
+        /* Header adjustments */
+        #header {
+            background: rgba(3,1,10,0.85);
+            backdrop-filter: blur(8px);
+            padding: 12px 0;
+            border-bottom: 2px solid var(--primary-color);
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+        #header .container { 
+            display:flex; 
+            align-items:center; 
+            justify-content:space-between; 
+            gap:12px; 
+            padding: 0 20px; 
+        }
+        #header .logo { font-size: 1.6rem; }
+
+        /* Page wrapper */
+        .login-wrapper {
+            min-height: calc(100vh - 86px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 36px 20px;
+        }
+
+        /* Card */
+        .login-card {
+            width: 100%;
+            max-width: 540px;
+            background: linear-gradient(180deg, rgba(10,7,32,0.85), rgba(6,4,20,0.95));
+            border-radius: 16px;
+            padding: 34px;
+            border: 1px solid rgba(107,75,255,0.14);
+            box-shadow: 0 8px 40px rgba(0,0,0,0.6), var(--glow-secondary);
+            position: relative;
+        }
+
+        /* Title */
+        .login-title {
+            font-family: var(--font-primary);
+            font-size: 2.4rem;
+            color: var(--primary-color);
+            margin: 0 0 18px 0;
+            text-align: center;
+            letter-spacing: 2px;
+            text-shadow: var(--glow-primary);
+        }
+
+        /* Form */
+        form.demo-login { width: 100%; margin: 0; }
+        .login-field { width: 100%; display: block; margin-bottom: 18px; }
+
+        /* Labels */
+        .login-field label {
+            display: block;
+            width: 100%;
+            margin-bottom: 8px;
+            color: rgba(229,234,255,0.92);
+            font-size: 1rem;
+            padding-left: 2px;
+        }
+
+        /* Inputs */
+        .login-field input[type="email"],
+        .login-field input[type="password"] {
+            width: 100%;
+            display: block;
+            padding: 12px 14px;
+            border-radius: 10px;
+            border: 2px solid rgba(107,75,255,0.18);
+            background: #05020f;
+            color: var(--text-color);
+            font-size: 1rem;
+            outline: none;
+            box-shadow: 0 4px 18px rgba(107,75,255,0.04), var(--glow-primary);
+            transition: border-color .18s, box-shadow .18s, transform .12s;
+            appearance: none;
+            caret-color: var(--primary-color);
+        }
+
+        .login-field input:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 6px 30px rgba(0,234,255,0.06), 0 0 28px rgba(0,234,255,0.12);
+        }
+
+        /* ✔✔ REMEMBER ME FIX — WORKS IN ALL THEMES */
+        .remember-field {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .remember-field input[type="checkbox"] {
+            -webkit-appearance: checkbox !important;
+            appearance: checkbox !important;
+
+            width: 18px;
+            height: 18px;
+            margin: 0;
+            cursor: pointer;
+
+            background: transparent !important;
+            border: none !important;
+            outline: none !important;
+        }
+
+        .remember-field label {
+            cursor: pointer;
+            font-size: 1rem;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: inline;
+        }
+
+        /* Forgot password */
+        .forgot-link {
+            color: var(--primary-color);
+            font-size: 1rem;
+            text-decoration: none;
+        }
+        .forgot-link:hover { text-decoration: underline; }
+
+        /* Submit button */
+        .login-cta .btn { 
+            width: 100%; 
+            padding: 14px 18px; 
+            font-size: 1.05rem; 
+        }
+
+        /* Meta text */
+        .login-meta {
+            text-align: center;
+            margin-top: 14px;
+            font-size: 0.95rem;
+            opacity: 0.85;
+        }
+
+        /* Remove section pseudo elements */
+        .login-card::before, .login-wrapper::before, 
+        .login-card::after, .login-wrapper::after {
+            content: none !important;
+        }
+
+        @media (max-width: 520px) {
+            .login-card { padding: 24px; border-radius: 12px; }
+            .login-title { font-size: 1.9rem; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="logo">QuantumFlux</div>
+            <nav id="nav" aria-label="top nav">
+                <ul style="display:flex; gap:12px; margin:0; padding:0; list-style:none;">
+                    <li><a href="" style="color:var(--text-color); text-decoration:none; font-size:0.95rem;">Home</a></li>
+                    <li><a href="#help" style="color:var(--text-color); text-decoration:none; font-size:0.95rem;">Help</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- LOGIN -->
+    <main class="login-wrapper">
+        <div class="login-card">
+
+            <h1 class="login-title">Sign in to your account</h1>
+
+            <form class="demo-login" novalidate>
+
+                <div class="login-field">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="you@company.com" required />
+                </div>
+
+                <div class="login-field">
+                    <label for="password">Password</label>
+                    <input id="password" name="password" type="password" placeholder="••••••••" required />
+                </div>
+
+                <!-- ✔ REMEMBER ME (fully working) -->
+                <div class="login-field remember-field">
+                    <input id="remember" name="remember" type="checkbox">
+                    <label for="remember">Remember me</label>
+                </div>
+
+                <!-- Forgot password -->
+                <div class="login-field" style="margin-top:-6px;">
+                    <a href="#" class="forgot-link">Forgot your password?</a>
+                </div>
+
+                <div class="login-cta">
+                    <button type="submit" class="btn">Log In</button>
+                </div>
+
+                <div class="login-meta">
+                    <p>Don’t have an account? <a href="#" style="color:var(--primary-color);">Register</a></p>
+                </div>
+
+            </form>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" style="padding:28px 20px; text-align:center; color:var(--text-color); opacity:0.85;">
+        <div class="container">
+            <small>&copy; 2025 QuantumFlux Inc. — Secure</small>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,154 @@
+/* ------------------------------------------------------------------- */
+/* Theme 08: Minimalist Pastel - Soft, Airy, Elegant, Clean Lines */
+/* ------------------------------------------------------------------- */
+
+:root {
+    --bg-color: #fcfaf8; /* Almost White */
+    --primary-color: #4d4d4d; /* Dark Gray (for main text) */
+    --secondary-color: #ff9aa2; /* Light Pink Pastel */
+    --accent-color: #b5e4d2; /* Mint Green Pastel */
+    --text-color: #6a6a6a;
+    --font-primary: 'Garamond', serif;
+    --font-secondary: 'Lato', sans-serif;
+    --shadow-minimal: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+body {
+    font-family: var(--font-secondary);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    scroll-behavior: smooth;
+}
+
+/* Utility & Layout */
+.container {
+    max-width: 900px; /* Narrower for a high-end feel */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 60px 0;
+    border-bottom: 1px solid var(--accent-color);
+}
+
+/* Titles */
+.section-title {
+    font-family: var(--font-primary);
+    font-weight: 300;
+    font-size: 3.8em;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    text-transform: none;
+    letter-spacing: 0px;
+    border-bottom: 1px solid var(--secondary-color);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Header & Navigation */
+#header {
+    background: var(--bg-color);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    box-shadow: var(--shadow-minimal);
+}
+
+#header .container {
+    /* Full width on header, only container content is limited */
+    max-width: 100%;
+    border: none;
+}
+
+.logo {
+    font-family: var(--font-primary);
+    font-size: 2.5em;
+    font-weight: 300;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+#nav ul {
+    list-style: none;
+    display: flex;
+}
+
+#nav ul li a {
+    color: var(--text-color);
+    font-size: 1.0em;
+    padding: 5px 10px;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s;
+}
+
+#nav ul li a:hover {
+    color: var(--secondary-color);
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-size: 1.0em;
+    font-weight: normal;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    border: 1px solid var(--secondary-color);
+}
+
+.btn:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+/* Menu/Content Structure */
+.menu-category, .contact-item {
+    padding: 25px;
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    box-shadow: var(--shadow-minimal);
+    border-radius: 8px;
+}
+
+.menu-category h3 {
+    color: var(--secondary-color);
+    font-family: var(--font-primary);
+    font-size: 1.8em;
+    font-weight: 400;
+    border-bottom: 1px solid var(--accent-color);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.menu-item {
+    border-bottom: none; /* Minimalist removes item separators */
+    padding: 8px 0;
+}
+
+.item-name {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+.item-price {
+    color: var(--secondary-color);
+    font-weight: normal;
+}
+
+/* Footer */
+#footer {
+    background: var(--accent-color);
+    color: var(--primary-color);
+    padding: 15px 0;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+

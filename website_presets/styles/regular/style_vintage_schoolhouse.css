@@ -1,0 +1,148 @@
+/* ------------------------------------------------------------------- */
+/* Theme 05: Vintage Schoolhouse - Dark, Chalkboard, Academic */
+/* ------------------------------------------------------------------- */
+
+:root {
+    --bg-color: #2c3e50; /* Dark Slate Gray (Chalkboard) */
+    --primary-color: #ecf0f1; /* Cream/Off-White (Chalk Text) */
+    --secondary-color: #f1c40f; /* Mustard Yellow (Gold Accent) */
+    --text-color: #bdc3c7; /* Lighter Gray for body text */
+    --dark-text: #2c3e50;
+    --font-primary: 'Georgia', serif;
+    --font-secondary: 'Arial', sans-serif;
+    --border-style: 4px solid var(--secondary-color);
+}
+
+body {
+    font-family: var(--font-secondary);
+    line-height: 1.7;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    scroll-behavior: smooth;
+    /* Simulate a slight paper texture */
+    background-image: linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px);
+    background-size: 100% 25px;
+}
+
+/* Utility & Layout */
+.container {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 65px 0;
+    border-bottom: 1px dashed var(--text-color);
+}
+
+/* Titles */
+.section-title {
+    font-family: var(--font-primary);
+    font-size: 3.5em;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: var(--border-style);
+    display: inline-block;
+    padding-bottom: 8px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Subtle chalk effect */
+}
+
+/* Header & Navigation */
+#header {
+    background: var(--bg-color);
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    border-bottom: var(--border-style);
+}
+
+.logo {
+    font-family: var(--font-primary);
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+#nav ul {
+    list-style: none;
+    display: flex;
+}
+
+#nav ul li a {
+    color: var(--text-color);
+    font-size: 1.1em;
+    padding: 5px 12px;
+    border: 1px solid transparent;
+    transition: all 0.3s;
+}
+
+#nav ul li a:hover {
+    color: var(--primary-color);
+    border-color: var(--secondary-color);
+    background: rgba(241, 196, 15, 0.1);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--dark-text);
+    padding: 15px 35px;
+    border-radius: 4px;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    border: 2px solid var(--secondary-color);
+    box-shadow: 0 5px 0 var(--dark-text);
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+    color: var(--dark-text);
+    box-shadow: 0 2px 0 var(--dark-text);
+    transform: translateY(3px);
+}
+
+/* Menu/Content Structure */
+.menu-category, .contact-item {
+    padding: 30px;
+    background: rgba(44, 62, 80, 0.7); /* Slightly lighter background */
+    border: 3px double var(--secondary-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+}
+
+.menu-category h3 {
+    color: var(--secondary-color);
+    font-family: var(--font-primary);
+    font-size: 2em;
+}
+
+.menu-item {
+    border-bottom: 1px solid var(--text-color);
+}
+
+.item-name {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+.item-price {
+    color: var(--secondary-color);
+    font-style: italic;
+}
+
+/* Footer */
+#footer {
+    background: var(--dark-text);
+    color: var(--text-color);
+    padding: 20px 0;
+    font-size: 0.9em;
+    border-top: var(--border-style);
+}
+
+

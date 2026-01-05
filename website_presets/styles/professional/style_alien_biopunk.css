@@ -1,0 +1,159 @@
+/* ------------------------------------------------------------------- */
+/* Theme 23: Alien Biopunk - Organic, Unsettling, Pulsating, Eerie */
+/* ------------------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,700;1,400&family=Jura:wght@300;400;700&display=swap');
+
+:root {
+    --bg-color: #1a0a22; /* Dark Purple Void */
+    --primary-color: #00f070; /* Eerie Bio-Green Pulse */
+    --secondary-color: #ff66ff; /* Unnatural Pink/Violet */
+    --accent-color: #554477; /* Muted Vein Purple */
+    --text-color: #e8e8e8;
+    --font-primary: 'Jura', sans-serif; /* Technical/Organic mix */
+    --font-secondary: 'Crimson Text', serif;
+    --shadow-organic: 0 0 10px rgba(0, 240, 112, 0.6);
+    --border-liquid: 2px solid var(--primary-color);
+}
+
+body {
+    font-family: var(--font-secondary);
+    line-height: 1.7;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    scroll-behavior: smooth;
+    /* Subtle organic texture/veins */
+    background-image: radial-gradient(var(--accent-color) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+/* Utility & Layout */
+.container {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+section {
+    padding: 70px 0;
+    /* Encased in a shell */
+    background-color: #2a1636;
+    border: var(--border-liquid);
+    box-shadow: var(--shadow-organic);
+    margin: 25px 0;
+    border-radius: 25px 5px 25px 5px; /* Non-standard organic shape */
+}
+
+/* Titles */
+.section-title {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    font-size: 3.5em;
+    margin-bottom: 30px;
+    color: var(--secondary-color);
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    text-shadow: 0 0 5px var(--secondary-color);
+    border-bottom: 4px dotted var(--primary-color);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Header & Navigation */
+#header {
+    background: var(--bg-color);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 5px 20px rgba(0, 240, 112, 0.2);
+    border-bottom: var(--border-liquid);
+}
+
+.logo {
+    font-family: var(--font-primary);
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-shadow: 0 0 5px var(--primary-color);
+}
+
+#nav ul {
+    list-style: none;
+    display: flex;
+}
+
+#nav ul li a {
+    color: var(--text-color);
+    font-size: 1.1em;
+    padding: 10px 15px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+#nav ul li a:hover {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    text-shadow: 0 0 2px var(--primary-color);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+    padding: 14px 40px;
+    border-radius: 15px 0 15px 0; /* Organic/unstable button shape */
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 10px var(--secondary-color);
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 15px var(--primary-color);
+}
+
+/* Menu/Content Structure */
+.menu-category, .contact-item {
+    padding: 30px;
+    background: #1f1028;
+    border: 1px dotted var(--secondary-color);
+    border-radius: 5px 15px 5px 15px;
+    box-shadow: 0 0 5px var(--accent-color);
+}
+
+.menu-category h3 {
+    font-family: var(--font-primary);
+    color: var(--secondary-color);
+    font-size: 2em;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+}
+
+.menu-item {
+    border-bottom: 1px dotted var(--accent-color);
+}
+
+.item-name {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+.item-price {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+/* Footer */
+#footer {
+    background: #0d0510;
+    color: var(--accent-color);
+    padding: 25px 0;
+    font-size: 0.9em;
+    border-top: 5px solid var(--secondary-color);
+}
+
+

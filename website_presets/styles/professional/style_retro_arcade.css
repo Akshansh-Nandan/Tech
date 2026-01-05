@@ -1,0 +1,156 @@
+/* ------------------------------------------------------------------- */
+/* Theme 09: Retro Arcade / 8-bit - Bright, Blocky, High-Contrast */
+/* ------------------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+    --bg-color: #000000;
+    --primary-color: #ff00ff; /* Magenta Neon */
+    --secondary-color: #00ffff; /* Cyan Neon */
+    --accent-color: #ffff00; /* Arcade Yellow */
+    --text-color: #ffffff;
+    --font-primary: 'Press Start 2P', monospace; /* Pixelated look */
+    --shadow-arcade: 4px 4px 0 #888;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Fallback for main text due to pixel font readability */
+    line-height: 1.5;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    scroll-behavior: smooth;
+    /* Animated dark background pattern */
+    background-image: repeating-linear-gradient(45deg, #111, #111 5px, #000 5px, #000 10px);
+}
+
+/* Utility & Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 60px 0;
+    border-bottom: 5px solid var(--primary-color);
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+    background-color: #111;
+}
+
+/* Titles */
+.section-title {
+    font-family: var(--font-primary);
+    font-size: 2.5em; /* Smaller font size needed for pixel fonts */
+    margin-bottom: 40px;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 0 0 10px var(--secondary-color), 0 0 20px var(--secondary-color);
+    border-bottom: 3px double var(--accent-color);
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* Header & Navigation */
+#header {
+    background: #222;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+    border-bottom: 3px solid var(--accent-color);
+}
+
+.logo {
+    font-family: var(--font-primary);
+    font-size: 1.8em;
+    font-weight: normal;
+    color: var(--primary-color);
+    text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+#nav ul {
+    list-style: none;
+    display: flex;
+}
+
+#nav ul li a {
+    font-family: var(--font-primary);
+    color: var(--text-color);
+    font-size: 0.8em;
+    padding: 8px 15px;
+    border: 3px solid var(--secondary-color);
+    transition: all 0.1s linear;
+    border-radius: 0;
+}
+
+#nav ul li a:hover {
+    color: var(--bg-color);
+    background: var(--primary-color);
+    box-shadow: 0 0 5px var(--primary-color);
+    transform: scale(1.05);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    padding: 15px 40px;
+    border-radius: 0;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.1s;
+    border: 5px outset var(--text-color); /* Outset for 3D look */
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+    border: 5px inset var(--text-color); /* Inset for 'pressed' look */
+    transform: translateY(2px);
+}
+
+/* Menu/Content Structure */
+.menu-category, .contact-item {
+    padding: 30px;
+    background: #0d0d0d;
+    border: 4px solid var(--secondary-color);
+    border-radius: 0;
+    box-shadow: 0 0 15px var(--secondary-color);
+}
+
+.menu-category h3 {
+    font-family: var(--font-primary);
+    color: var(--accent-color);
+    font-size: 1.5em;
+    border-bottom: 2px dashed var(--primary-color);
+    padding-bottom: 10px;
+}
+
+.menu-item {
+    border-bottom: 1px dashed var(--text-color);
+}
+
+.item-name {
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+.item-price {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Footer */
+#footer {
+    background: #000;
+    color: var(--accent-color);
+    padding: 20px 0;
+    font-size: 0.8em;
+    border-top: 5px solid var(--primary-color);
+    font-family: var(--font-primary);
+    letter-spacing: 2px;
+}
+
+

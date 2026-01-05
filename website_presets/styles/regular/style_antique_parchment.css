@@ -1,0 +1,156 @@
+/* ------------------------------------------------------------------- */
+/* Theme 24: Antique Parchment - Sepia, Yellowed Paper, Fragile, Classic */
+/* ------------------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Old+Standard+TT:ital@0;1&display=swap');
+
+:root {
+    --bg-color: #fcf1d0; /* Very light yellowed paper */
+    --primary-color: #583101; /* Dark Sepia Ink/Brown */
+    --secondary-color: #a37237; /* Faded Gold/Brass */
+    --accent-color: #d1b87a; /* Muted Parchment Highlight */
+    --text-color: #4b2c0f;
+    --font-primary: 'Lora', serif; /* Elegant title serif */
+    --font-secondary: 'Old Standard TT', serif; /* Classic body serif */
+    --shadow-aged: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+body {
+    font-family: var(--font-secondary);
+    line-height: 1.7;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    scroll-behavior: smooth;
+    /* Subtle paper texture */
+    background-image: url('https://placehold.co/1000x1000/fcf1d0/d1b87a?text=PAPER+TEXTURE');
+    background-size: cover;
+}
+
+/* Utility & Layout */
+.container {
+    max-width: 800px; /* Narrow, book-like column */
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+section {
+    padding: 60px 0;
+    background-color: #ffffff; /* Contrast against the textured body */
+    border-bottom: 2px solid var(--accent-color);
+    box-shadow: var(--shadow-aged);
+    margin: 20px 0;
+    border-radius: 2px;
+}
+
+/* Titles */
+.section-title {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    font-size: 3.2em;
+    margin-bottom: 25px;
+    color: var(--primary-color);
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    border-bottom: 3px double var(--secondary-color);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Header & Navigation */
+#header {
+    background: var(--primary-color);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    border-bottom: 5px solid var(--secondary-color);
+}
+
+.logo {
+    font-family: var(--font-primary);
+    font-size: 2.5em;
+    font-weight: 400;
+    color: var(--bg-color);
+    font-style: italic;
+}
+
+#nav ul {
+    list-style: none;
+    display: flex;
+}
+
+#nav ul li a {
+    color: var(--bg-color);
+    font-size: 1.0em;
+    padding: 8px 15px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+#nav ul li a:hover {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 12px 30px;
+    border-radius: 0;
+    font-size: 1.0em;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    border: 1px solid var(--primary-color);
+    box-shadow: 3px 3px 0 var(--primary-color);
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    transform: translate(3px, 3px);
+    box-shadow: none;
+}
+
+/* Menu/Content Structure */
+.menu-category, .contact-item {
+    padding: 35px;
+    background: var(--bg-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    box-shadow: var(--shadow-aged);
+}
+
+.menu-category h3 {
+    font-family: var(--font-primary);
+    color: var(--primary-color);
+    font-size: 2.2em;
+    border-bottom: 1px solid var(--accent-color);
+    padding-bottom: 5px;
+}
+
+.menu-item {
+    border-bottom: 1px dotted var(--accent-color);
+}
+
+.item-name {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+.item-price {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+/* Footer */
+#footer {
+    background: var(--primary-color);
+    color: var(--bg-color);
+    padding: 25px 0;
+    font-size: 0.9em;
+    border-top: 5px solid var(--secondary-color);
+}
+
+

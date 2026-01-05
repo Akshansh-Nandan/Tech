@@ -1,0 +1,158 @@
+/* ------------------------------------------------------------------- */
+/* Theme 19: High-Contrast Monochromatic - Stark Black, White, Graphic */
+/* ------------------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@900&family=Oswald:wght@200..700&display=swap');
+
+:root {
+    --bg-color: #ffffff; /* Pure White */
+    --primary-color: #000000; /* Pure Black */
+    --secondary-color: #ff0000; /* Single Accent: Red */
+    --accent-color: #1a1a1a; /* Near Black */
+    --text-color: #000000;
+    --font-primary: 'Chivo', sans-serif;
+    --font-secondary: 'Oswald', sans-serif;
+    --border-stark: 5px solid var(--primary-color);
+}
+
+body {
+    font-family: var(--font-secondary);
+    line-height: 1.2;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    scroll-behavior: smooth;
+}
+
+/* Utility & Layout */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 70px 0;
+    border-bottom: var(--border-stark);
+    background-color: var(--bg-color);
+    /* Stark shadow for graphic separation */
+    box-shadow: 0 10px 0 var(--accent-color);
+    margin: 20px 0;
+}
+
+/* Titles */
+.section-title {
+    font-family: var(--font-primary);
+    font-weight: 900;
+    font-size: 5em;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    -webkit-text-stroke: 1px var(--secondary-color);
+    border-bottom: var(--border-stark);
+    display: inline-block;
+    padding-bottom: 10px;
+    line-height: 1;
+}
+
+/* Header & Navigation */
+#header {
+    background: var(--primary-color);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
+    border-bottom: 5px solid var(--secondary-color);
+}
+
+.logo {
+    font-family: var(--font-primary);
+    font-size: 3em;
+    font-weight: 900;
+    color: var(--bg-color);
+    letter-spacing: 5px;
+}
+
+#nav ul {
+    list-style: none;
+    display: flex;
+}
+
+#nav ul li a {
+    color: var(--bg-color);
+    font-family: var(--font-secondary);
+    font-size: 1.1em;
+    padding: 10px 18px;
+    border: 3px solid transparent;
+    transition: all 0.1s;
+}
+
+#nav ul li a:hover {
+    color: var(--secondary-color);
+    border: 3px solid var(--secondary-color);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+    padding: 15px 40px;
+    border-radius: 0;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.1s;
+    border: var(--border-stark);
+    box-shadow: 7px 7px 0 var(--accent-color);
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    transform: translate(7px, 7px);
+    box-shadow: none;
+}
+
+/* Menu/Content Structure */
+.menu-category, .contact-item {
+    padding: 40px;
+    background: #f0f0f0;
+    border: var(--border-stark);
+    border-radius: 0;
+    box-shadow: 5px 5px 0 var(--accent-color);
+}
+
+.menu-category h3 {
+    font-family: var(--font-primary);
+    color: var(--primary-color);
+    font-size: 3em;
+    border-bottom: 1px solid var(--secondary-color);
+    padding-bottom: 5px;
+}
+
+.menu-item {
+    border-bottom: 2px dashed var(--accent-color);
+}
+
+.item-name {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+.item-price {
+    color: var(--secondary-color);
+    font-weight: 900;
+    font-size: 1.3em;
+}
+
+/* Footer */
+#footer {
+    background: var(--primary-color);
+    color: var(--bg-color);
+    padding: 30px 0;
+    font-size: 1.0em;
+    border-top: 5px solid var(--secondary-color);
+    text-transform: uppercase;
+}
+
+

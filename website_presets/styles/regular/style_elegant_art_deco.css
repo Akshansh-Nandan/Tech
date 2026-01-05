@@ -1,0 +1,153 @@
+/* ------------------------------------------------------------------- */
+/* Theme 10: Elegant Art Deco - Geometric, Luxurious, Black & Gold */
+/* ------------------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;700&display=swap');
+
+:root {
+    --bg-color: #1a1a1a; /* Deep Black/Charcoal */
+    --primary-color: #e6c27f; /* Polished Gold */
+    --secondary-color: #8c7851; /* Brass/Bronze */
+    --accent-color: #f7f7f7; /* Ivory/Cream */
+    --text-color: #cccccc;
+    --font-primary: 'Cormorant Garamond', serif;
+    --font-secondary: 'Arial', sans-serif;
+    --line-weight: 1px solid var(--secondary-color);
+}
+
+body {
+    font-family: var(--font-secondary);
+    line-height: 1.7;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    scroll-behavior: smooth;
+}
+
+/* Utility & Layout */
+.container {
+    max-width: 1000px; /* Exclusive, refined width */
+    margin: 0 auto;
+    padding: 0 30px;
+    border-left: var(--line-weight);
+    border-right: var(--line-weight);
+}
+
+section {
+    padding: 80px 0;
+    border-bottom: 2px solid var(--secondary-color);
+    background-color: #222;
+}
+
+/* Titles */
+.section-title {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    font-size: 3.5em;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 8px; /* High letter spacing is key */
+    border-bottom: 4px double var(--primary-color);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Header & Navigation */
+#header {
+    background: #111111;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    border-bottom: var(--line-weight);
+}
+
+.logo {
+    font-family: var(--font-primary);
+    font-size: 2.8em;
+    font-weight: 300;
+    color: var(--primary-color);
+    letter-spacing: 5px;
+}
+
+#nav ul {
+    list-style: none;
+    display: flex;
+}
+
+#nav ul li a {
+    color: var(--text-color);
+    font-size: 1.1em;
+    padding: 8px 15px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+#nav ul li a:hover {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    padding: 12px 30px;
+    border-radius: 0;
+    font-size: 1.0em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    border: 1px solid var(--primary-color);
+    box-shadow: 0 0 5px rgba(230, 194, 127, 0.7);
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    border-color: var(--secondary-color);
+}
+
+/* Menu/Content Structure */
+.menu-category, .contact-item {
+    padding: 30px;
+    background: #333333;
+    border: 1px solid var(--secondary-color);
+    border-radius: 0;
+    /* Geometric edge using a slight inner box shadow */
+    box-shadow: inset 0 0 0 5px rgba(230, 194, 127, 0.1);
+}
+
+.menu-category h3 {
+    font-family: var(--font-primary);
+    color: var(--primary-color);
+    font-size: 2.2em;
+    border-bottom: var(--line-weight);
+    padding-bottom: 5px;
+}
+
+.menu-item {
+    border-bottom: 1px dotted var(--text-color);
+}
+
+.item-name {
+    color: var(--accent-color);
+    font-weight: 400;
+}
+.item-price {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Footer */
+#footer {
+    background: #111;
+    color: var(--secondary-color);
+    padding: 25px 0;
+    font-size: 0.9em;
+    border-top: 5px solid var(--primary-color);
+    letter-spacing: 2px;
+}
+
+

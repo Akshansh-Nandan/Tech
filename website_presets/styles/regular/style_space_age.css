@@ -1,0 +1,155 @@
+/* ------------------------------------------------------------------- */
+/* Theme 17: Space Age / Clean Sci-Fi - White, Sleek, Minimalist Tech */
+/* ------------------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;700&display=swap');
+
+:root {
+    --bg-color: #f7f9fa; /* Off-White / Future Lab */
+    --primary-color: #0077ff; /* Primary Electric Blue */
+    --secondary-color: #c0c0c0; /* Silver/Metal Gray */
+    --accent-color: #212121; /* Dark Contrast */
+    --text-color: #444444;
+    --font-primary: 'Jost', sans-serif;
+    --font-secondary: 'Arial', sans-serif;
+    --radius-smooth: 16px; /* Smooth curves */
+    --shadow-floating: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+body {
+    font-family: var(--font-primary);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    scroll-behavior: smooth;
+}
+
+/* Utility & Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+section {
+    padding: 70px 0;
+    border-bottom: 1px solid var(--secondary-color);
+    background-color: #ffffff;
+    box-shadow: var(--shadow-floating);
+    margin: 15px 0;
+    border-radius: var(--radius-smooth);
+}
+
+/* Titles */
+.section-title {
+    font-family: var(--font-primary);
+    font-weight: 300;
+    font-size: 3.8em;
+    margin-bottom: 30px;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    border-bottom: 2px solid var(--primary-color);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Header & Navigation */
+#header {
+    background: #ffffff;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 5px solid var(--primary-color);
+}
+
+.logo {
+    font-family: var(--font-primary);
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--primary-color);
+    letter-spacing: 1px;
+}
+
+#nav ul {
+    list-style: none;
+    display: flex;
+}
+
+#nav ul li a {
+    color: var(--text-color);
+    font-size: 1.0em;
+    padding: 10px 18px;
+    border-radius: var(--radius-smooth);
+    transition: all 0.3s;
+}
+
+#nav ul li a:hover {
+    color: var(--bg-color);
+    background: var(--primary-color);
+    box-shadow: 0 0 10px rgba(0, 119, 255, 0.5);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    padding: 14px 40px;
+    border-radius: 40px; /* Fully rounded/pill-shaped */
+    font-size: 1.1em;
+    font-weight: 400;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    border: none;
+    box-shadow: 0 0 15px rgba(0, 119, 255, 0.4);
+}
+
+.btn:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    box-shadow: 0 0 15px rgba(33, 33, 33, 0.7);
+}
+
+/* Menu/Content Structure */
+.menu-category, .contact-item {
+    padding: 30px;
+    background: var(--bg-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: var(--radius-smooth);
+    box-shadow: var(--shadow-floating);
+}
+
+.menu-category h3 {
+    font-family: var(--font-primary);
+    color: var(--primary-color);
+    font-size: 2.2em;
+    font-weight: 400;
+    border-bottom: 1px solid var(--secondary-color);
+    padding-bottom: 5px;
+}
+
+.menu-item {
+    border-bottom: 1px dotted #e0e0e0;
+}
+
+.item-name {
+    color: var(--accent-color);
+    font-weight: 500;
+}
+.item-price {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Footer */
+#footer {
+    background: var(--accent-color);
+    color: var(--secondary-color);
+    padding: 20px 0;
+    font-size: 0.8em;
+    border-top: 5px solid var(--primary-color);
+}
+
+

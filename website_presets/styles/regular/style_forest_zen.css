@@ -1,0 +1,150 @@
+/* ------------------------------------------------------------------- */
+/* Theme 14: Forest Zen - Calm, Nature, Organic, Earth Tones */
+/* ------------------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Roboto:wght@300&display=swap');
+
+:root {
+    --bg-color: #fcf6f3; /* Light Beige/Cream */
+    --primary-color: #38761d; /* Deep Forest Green */
+    --secondary-color: #8f7259; /* Soft Wood Brown */
+    --accent-color: #b5c7a9; /* Sage Green */
+    --text-color: #444444;
+    --font-primary: 'Merriweather', serif;
+    --font-secondary: 'Roboto', sans-serif;
+    --shadow-soft: 0 4px 6px rgba(0, 0, 0, 0.08);
+}
+
+body {
+    font-family: var(--font-secondary);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    scroll-behavior: smooth;
+}
+
+/* Utility & Layout */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 70px 0;
+    border-bottom: 2px solid var(--accent-color);
+    background-color: #ffffff;
+    box-shadow: var(--shadow-soft);
+    margin: 20px 0;
+    border-radius: 12px; /* Soft, organic edges */
+}
+
+/* Titles */
+.section-title {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    font-size: 3.2em;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    text-transform: capitalize;
+    letter-spacing: 0;
+    border-bottom: 3px solid var(--secondary-color);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Header & Navigation */
+#header {
+    background: var(--primary-color);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    border-bottom: 4px solid var(--secondary-color);
+}
+
+.logo {
+    font-family: var(--font-primary);
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--bg-color);
+}
+
+#nav ul {
+    list-style: none;
+    display: flex;
+}
+
+#nav ul li a {
+    color: var(--bg-color);
+    font-size: 1.1em;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+#nav ul li a:hover {
+    color: var(--primary-color);
+    background: var(--accent-color);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+    padding: 12px 30px;
+    border-radius: 20px; /* Pill shape for organic feel */
+    font-size: 1.0em;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    border: none;
+    box-shadow: var(--shadow-soft);
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(56, 118, 29, 0.7);
+}
+
+/* Menu/Content Structure */
+.menu-category, .contact-item {
+    padding: 30px;
+    background: var(--bg-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 10px;
+    box-shadow: var(--shadow-soft);
+}
+
+.menu-category h3 {
+    font-family: var(--font-primary);
+    color: var(--primary-color);
+    font-size: 2em;
+    font-weight: 400;
+    border-bottom: 1px dashed var(--accent-color);
+    padding-bottom: 5px;
+}
+
+.menu-item {
+    border-bottom: 1px dotted #ccc;
+}
+
+.item-name {
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+.item-price {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Footer */
+#footer {
+    background: var(--secondary-color);
+    color: var(--bg-color);
+    padding: 25px 0;
+    font-size: 0.9em;
+}
+
+

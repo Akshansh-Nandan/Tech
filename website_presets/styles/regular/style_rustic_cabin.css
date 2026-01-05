@@ -1,0 +1,159 @@
+/* ------------------------------------------------------------------- */
+/* Theme 16: Rustic Cabin - Warm, Cozy, Wood Texture, Handcrafted */
+/* ------------------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Inria+Serif:wght@300;400;700&display=swap');
+
+:root {
+    --bg-color: #795548; /* Medium Brown Wood */
+    --primary-color: #ffcc80; /* Cream/Butter Yellow (Warm Light) */
+    --secondary-color: #d84315; /* Burnt Orange/Clay (Fireplace) */
+    --accent-color: #3e2723; /* Dark Wood Grain */
+    --text-color: #f5f5f5;
+    --font-primary: 'Homemade Apple', cursive; /* Handwritten for titles */
+    --font-secondary: 'Inria Serif', serif;
+    --shadow-cozy: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+body {
+    font-family: var(--font-secondary);
+    line-height: 1.7;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    scroll-behavior: smooth;
+    /* Simulated wood grain background */
+    background-image: url('https://placehold.co/1000x1000/6d4c41/795548?text=WOOD+GRAIN');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Utility & Layout */
+.container {
+    max-width: 900px; /* Intimate feel */
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+section {
+    padding: 80px 0;
+    /* Content on a slightly opaque paper background */
+    background-color: rgba(62, 39, 35, 0.95);
+    border-bottom: 5px solid var(--secondary-color);
+    box-shadow: var(--shadow-cozy);
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+/* Titles */
+.section-title {
+    font-family: var(--font-primary);
+    font-weight: 400;
+    font-size: 3em;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 0 var(--accent-color);
+    border-bottom: 2px dashed var(--primary-color);
+    display: inline-block;
+    padding-bottom: 5px;
+    line-height: 1.2;
+}
+
+/* Header & Navigation */
+#header {
+    background: var(--accent-color);
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+.logo {
+    font-family: var(--font-primary);
+    font-size: 2.5em;
+    font-weight: normal;
+    color: var(--primary-color);
+}
+
+#nav ul {
+    list-style: none;
+    display: flex;
+}
+
+#nav ul li a {
+    color: var(--text-color);
+    font-size: 1.1em;
+    padding: 8px 15px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+#nav ul li a:hover {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    padding: 15px 35px;
+    border-radius: 0;
+    font-size: 1.1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    border: 3px solid var(--primary-color);
+    box-shadow: 4px 4px 0 var(--primary-color);
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    transform: translate(4px, 4px);
+    box-shadow: none;
+}
+
+/* Menu/Content Structure */
+.menu-category, .contact-item {
+    padding: 35px;
+    background: #3e2723;
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.menu-category h3 {
+    font-family: var(--font-primary);
+    color: var(--primary-color);
+    font-size: 1.8em;
+    border-bottom: 1px dashed var(--secondary-color);
+    padding-bottom: 10px;
+}
+
+.menu-item {
+    border-bottom: 1px dotted var(--text-color);
+}
+
+.item-name {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+.item-price {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+/* Footer */
+#footer {
+    background: var(--accent-color);
+    color: var(--primary-color);
+    padding: 25px 0;
+    font-size: 0.9em;
+    border-top: 3px solid var(--secondary-color);
+}
+
+

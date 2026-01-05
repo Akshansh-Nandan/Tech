@@ -1,0 +1,142 @@
+/* ------------------------------------------------------------------- */
+/* Theme 04: Forest & Earth Tones - Organic, Natural, Deep Greens */
+/* ------------------------------------------------------------------- */
+
+:root {
+    --bg-color: #eef4e8; /* Pale Sage/Creamy Green */
+    --primary-color: #385e38; /* Deep Forest Green */
+    --secondary-color: #a8a388; /* Moss/Taupe Gray */
+    --accent-color: #a0522d; /* Sienna/Terracotta */
+    --text-color: #333333;
+    --font-primary: 'Roboto Slab', serif;
+    --font-secondary: 'Inter', sans-serif;
+    --radius: 12px;
+}
+
+body {
+    font-family: var(--font-secondary);
+    line-height: 1.7;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    scroll-behavior: smooth;
+}
+
+/* Utility & Layout */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 70px 0;
+}
+
+/* Titles */
+.section-title {
+    font-family: var(--font-primary);
+    font-size: 3em;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+    text-transform: none; /* No forced capitalization */
+    letter-spacing: 0.5px;
+    border-left: 5px solid var(--accent-color);
+    padding-left: 15px;
+    display: inline-block;
+}
+
+/* Header & Navigation */
+#header {
+    background: var(--primary-color);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    font-family: var(--font-primary);
+    font-size: 2.2em;
+    font-weight: 600;
+    color: var(--bg-color);
+}
+
+#nav ul {
+    list-style: none;
+    display: flex;
+}
+
+#nav ul li a {
+    color: var(--secondary-color);
+    font-size: 1.05em;
+    padding: 8px 12px;
+    border-radius: var(--radius);
+    transition: all 0.3s;
+}
+
+#nav ul li a:hover {
+    color: var(--bg-color);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    padding: 12px 30px;
+    border-radius: var(--radius);
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.2s;
+    border: none;
+    box-shadow: 0 5px 0 var(--secondary-color);
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+    box-shadow: 0 2px 0 var(--secondary-color);
+    transform: translateY(3px);
+}
+
+/* Menu/Content Structure */
+.menu-category, .contact-item {
+    padding: 30px;
+    background: var(--bg-color);
+    border: 2px solid var(--secondary-color);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+    border-radius: var(--radius);
+}
+
+.menu-category h3 {
+    color: var(--primary-color);
+    font-family: var(--font-primary);
+    font-size: 2em;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.menu-item {
+    border-bottom: 1px solid #ccc;
+}
+
+.item-name {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+.item-price {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+/* Footer */
+#footer {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 25px 0;
+    font-size: 1em;
+}
+
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status Page — Universal</title>
+    
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="../../../styles/premium/style_quantum_flux_v2.css"> 
+    <script src="../../../scripts/script.js"></script>
+</head>
+<body style="margin:0; display:flex; flex-direction:column; min-height:100vh;">
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="logo">Business Name</div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Status Card Centered -->
+    <main style="flex:1; display:flex; align-items:center; justify-content:center; padding:20px;">
+        <div class="login-card" style="max-width:500px; width:100%; text-align:center;">
+            <h1 class="login-title status-code">500</h1>
+            <p class="status-message">Internal Server Error</p>
+            <p class="status-description">Something went wrong. Please try again later.</p>
+            <a href="" class="btn">Go Home</a>
+        </div>
+    </main>
+
+    <!-- Footer Fixed at Bottom -->
+    <footer id="footer" style="text-align:center; padding:20px; margin-top:auto;">
+        <div class="container">
+            <p>&copy; 2025 Universal Template Inc. | All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JS for Dynamic Status -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const code = params.get('code') || '500';
+            const message = params.get('message') || 'Internal Server Error';
+            const description = params.get('desc') || 'Something went wrong. Please try again later.';
+
+            document.querySelector('.status-code').textContent = code;
+            document.querySelector('.status-message').textContent = message;
+            document.querySelector('.status-description').textContent = description;
+        });
+    </script>
+
+</body>
+</html>
+
+

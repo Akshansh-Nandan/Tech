@@ -1,0 +1,159 @@
+/* ------------------------------------------------------------------- */
+/* Theme 15: Neon City Noir - Dark, Rainy, Sleek, Electric Glow */
+/* ------------------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@300;400;700&display=swap');
+
+:root {
+    --bg-color: #050a0e; /* Deep Black/Dark Navy */
+    --primary-color: #00dfff; /* Electric Cyan Neon */
+    --secondary-color: #ff00ff; /* Electric Magenta Neon */
+    --accent-color: #555555; /* Wet Concrete Gray */
+    --text-color: #c0c0c0;
+    --font-primary: 'Chivo Mono', monospace;
+    --font-secondary: 'Arial', sans-serif;
+    --glow-effect: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color);
+    --border-glow: 1px solid var(--primary-color);
+}
+
+body {
+    font-family: var(--font-secondary);
+    line-height: 1.5;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    scroll-behavior: smooth;
+    /* Simulate a subtle dark rain/mist texture */
+    background-image: linear-gradient(rgba(0,0,0,0.5) 1px, transparent 1px);
+    background-size: 100% 2px;
+}
+
+/* Utility & Layout */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+section {
+    padding: 75px 0;
+    border-bottom: 2px solid var(--accent-color);
+    background-color: rgba(5, 10, 14, 0.8);
+    box-shadow: 0 0 30px rgba(0, 223, 255, 0.1); /* Subtle area glow */
+}
+
+/* Titles */
+.section-title {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    font-size: 3.5em;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: var(--glow-effect);
+    border-bottom: 5px double var(--secondary-color);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Header & Navigation */
+#header {
+    background: #000000;
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 0 20px var(--primary-color);
+    border-bottom: var(--border-glow);
+}
+
+.logo {
+    font-family: var(--font-primary);
+    font-size: 2.8em;
+    font-weight: 400;
+    color: var(--secondary-color);
+    text-shadow: 0 0 5px var(--secondary-color);
+}
+
+#nav ul {
+    list-style: none;
+    display: flex;
+}
+
+#nav ul li a {
+    color: var(--text-color);
+    font-size: 1.0em;
+    padding: 8px 15px;
+    border-radius: 2px;
+    transition: all 0.3s;
+    text-shadow: 0 0 2px var(--text-color);
+}
+
+#nav ul li a:hover {
+    color: var(--primary-color);
+    border: var(--border-glow);
+    text-shadow: var(--glow-effect);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    padding: 14px 40px;
+    border-radius: 4px;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    border: none;
+    box-shadow: var(--glow-effect);
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 5px var(--secondary-color), 0 0 15px var(--secondary-color);
+}
+
+/* Menu/Content Structure */
+.menu-category, .contact-item {
+    padding: 35px;
+    background: #111111;
+    border: 1px solid var(--accent-color);
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 223, 255, 0.2);
+}
+
+.menu-category h3 {
+    font-family: var(--font-primary);
+    color: var(--primary-color);
+    font-size: 2em;
+    border-bottom: var(--border-glow);
+    padding-bottom: 5px;
+}
+
+.menu-item {
+    border-bottom: 1px solid var(--accent-color);
+}
+
+.item-name {
+    color: var(--text-color);
+    font-weight: 400;
+    text-shadow: 0 0 2px var(--primary-color);
+}
+.item-price {
+    color: var(--secondary-color);
+    font-weight: bold;
+    text-shadow: 0 0 5px var(--secondary-color);
+}
+
+/* Footer */
+#footer {
+    background: #000000;
+    color: var(--accent-color);
+    padding: 25px 0;
+    font-size: 0.9em;
+    border-top: 5px solid var(--secondary-color);
+}
+
+

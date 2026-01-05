@@ -1,0 +1,150 @@
+/* ------------------------------------------------------------------- */
+/* Theme 21: Tropical Resort - Airy, Light, Aqua, Sand, Breezy */
+/* ------------------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&family=Lato:wght@300;400;700&display=swap');
+
+:root {
+    --bg-color: #f8f8f8; /* Light Sand/Beach */
+    --primary-color: #00bcd4; /* Deep Ocean Aqua */
+    --secondary-color: #ff9800; /* Sunset Orange/Coral */
+    --accent-color: #b2ebf2; /* Light Pool Blue */
+    --text-color: #333333;
+    --font-primary: 'Varela Round', sans-serif;
+    --font-secondary: 'Lato', sans-serif;
+    --shadow-light: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: var(--font-secondary);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    scroll-behavior: smooth;
+}
+
+/* Utility & Layout */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 80px 0;
+    background-color: #ffffff;
+    border-bottom: 3px solid var(--accent-color);
+    box-shadow: var(--shadow-light);
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+/* Titles */
+.section-title {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    font-size: 3.5em;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    border-bottom: 4px solid var(--secondary-color);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Header & Navigation */
+#header {
+    background: #ffffff;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-bottom: 5px solid var(--primary-color);
+}
+
+.logo {
+    font-family: var(--font-primary);
+    font-size: 2.8em;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+#nav ul {
+    list-style: none;
+    display: flex;
+}
+
+#nav ul li a {
+    color: var(--text-color);
+    font-size: 1.1em;
+    padding: 10px 18px;
+    border-radius: 50px; /* Rounded pill look */
+    transition: all 0.3s;
+}
+
+#nav ul li a:hover {
+    color: var(--bg-color);
+    background: var(--primary-color);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    border: none;
+    box-shadow: 0 5px 10px rgba(255, 152, 0, 0.4);
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+    box-shadow: 0 5px 10px rgba(0, 188, 212, 0.4);
+}
+
+/* Menu/Content Structure */
+.menu-category, .contact-item {
+    padding: 30px;
+    background: #fdfdfd;
+    border: 1px solid var(--accent-color);
+    border-radius: 15px;
+    box-shadow: var(--shadow-light);
+}
+
+.menu-category h3 {
+    font-family: var(--font-primary);
+    color: var(--primary-color);
+    font-size: 2.2em;
+    border-bottom: 3px solid var(--accent-color);
+    padding-bottom: 5px;
+}
+
+.menu-item {
+    border-bottom: 1px dotted #ccc;
+}
+
+.item-name {
+    color: var(--text-color);
+    font-weight: 700;
+}
+.item-price {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+/* Footer */
+#footer {
+    background: var(--primary-color);
+    color: var(--bg-color);
+    padding: 25px 0;
+    font-size: 0.9em;
+    border-top: 5px solid var(--secondary-color);
+}
+
+

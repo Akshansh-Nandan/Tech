@@ -1,0 +1,163 @@
+/* ------------------------------------------------------------------- */
+/* Theme 20: Steampunk - Victorian, Industrial, Brass, Clockwork */
+/* ------------------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Cormorant:wght@400&display=swap');
+
+:root {
+    --bg-color: #3b2c28; /* Dark Brown Leather/Wood */
+    --primary-color: #d4a768; /* Tarnished Brass/Gold */
+    --secondary-color: #8c271e; /* Deep Burgundy/Red Velvet */
+    --accent-color: #f7f3e8; /* Aged Paper/Cream */
+    --text-color: #f7f3e8;
+    --font-primary: 'Roboto Slab', serif;
+    --font-secondary: 'Cormorant', serif;
+    --shadow-brass: 0 0 5px rgba(212, 167, 104, 0.7);
+    --border-rivet: 3px solid var(--primary-color);
+}
+
+body {
+    font-family: var(--font-secondary);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    scroll-behavior: smooth;
+    /* Subtle background texture */
+    background-image: linear-gradient(rgba(0,0,0,0.5) 1px, transparent 1px);
+    background-size: 100% 30px;
+}
+
+/* Utility & Layout */
+.container {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+section {
+    padding: 80px 0;
+    /* Inner panels look like polished dark wood */
+    background-color: #4e3a36;
+    border-bottom: 5px ridge var(--primary-color);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    margin: 20px 0;
+    border-radius: 2px;
+}
+
+/* Titles */
+.section-title {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    font-size: 3.5em;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-shadow: 1px 1px 2px var(--secondary-color);
+    border-bottom: var(--border-rivet);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Header & Navigation */
+#header {
+    background: var(--accent-color);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    border-bottom: 5px double var(--secondary-color);
+}
+
+.logo {
+    font-family: var(--font-primary);
+    font-size: 2.5em;
+    font-weight: 400;
+    color: var(--accent-color);
+    text-shadow: var(--shadow-brass);
+    color: var(--secondary-color);
+}
+
+#nav ul {
+    list-style: none;
+    display: flex;
+}
+
+#nav ul li a {
+    color: var(--secondary-color);
+    font-size: 1.0em;
+    padding: 10px 18px;
+    border: 2px solid var(--secondary-color);
+    transition: all 0.3s;
+    border-radius: 0;
+}
+
+#nav ul li a:hover {
+    color: var(--bg-color);
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    padding: 14px 35px;
+    border-radius: 4px;
+    font-size: 1.1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    border: 2px outset var(--accent-color); /* Metal button look */
+    box-shadow: var(--shadow-brass);
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    transform: translateY(1px);
+    box-shadow: none;
+}
+
+/* Menu/Content Structure */
+.menu-category, .contact-item {
+    padding: 30px;
+    background: #5a4540;
+    border: var(--border-rivet);
+    border-radius: 0;
+    margin-bottom: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.menu-category h3 {
+    font-family: var(--font-primary);
+    color: var(--accent-color);
+    font-size: 2em;
+    border-bottom: 1px dotted var(--primary-color);
+    padding-bottom: 10px;
+}
+
+.menu-item {
+    border-bottom: 1px solid var(--accent-color);
+}
+
+.item-name {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+.item-price {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+/* Footer */
+#footer {
+    background: #251b17;
+    color: var(--primary-color);
+    padding: 25px 0;
+    font-size: 0.9em;
+    border-top: 5px solid var(--secondary-color);
+}
+
+

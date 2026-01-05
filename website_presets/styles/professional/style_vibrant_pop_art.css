@@ -1,0 +1,164 @@
+/* ------------------------------------------------------------------- */
+/* Theme 13: Vibrant Pop Art - Bold, Comic Book, Heavy Outline */
+/* ------------------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+:root {
+    --bg-color: #ffeb3b; /* Bright Yellow */
+    --primary-color: #e91e63; /* Hot Pink/Magenta */
+    --secondary-color: #2196f3; /* Comic Blue */
+    --accent-color: #000000; /* Heavy Black Outline */
+    --text-color: #333333;
+    --font-primary: 'Bangers', cursive; /* Comic font */
+    --font-secondary: 'Arial', sans-serif;
+    --border-weight: 4px solid var(--accent-color);
+    --shadow-pop: 5px 5px 0 var(--accent-color);
+}
+
+body {
+    font-family: var(--font-secondary);
+    line-height: 1.4;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    scroll-behavior: smooth;
+    /* Simulate halftone dots */
+    background-image: radial-gradient(#fff 10%, transparent 10%), radial-gradient(#fff 10%, transparent 10%);
+    background-size: 10px 10px;
+    background-position: 0 0, 5px 5px;
+}
+
+/* Utility & Layout */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 60px 0;
+    border-bottom: var(--border-weight);
+    background-color: #ffffff;
+    box-shadow: var(--shadow-pop);
+    margin: 30px 0;
+}
+
+/* Titles */
+.section-title {
+    font-family: var(--font-primary);
+    font-size: 4.5em;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    -webkit-text-stroke: 2px var(--accent-color); /* Black outline */
+    text-shadow: 8px 8px 0 var(--secondary-color); /* Offset shadow */
+    display: inline-block;
+    line-height: 1;
+}
+
+/* Header & Navigation */
+#header {
+    background: var(--accent-color);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    border-bottom: 5px solid var(--primary-color);
+}
+
+.logo {
+    font-family: var(--font-primary);
+    font-size: 2.8em;
+    font-weight: normal;
+    color: var(--bg-color);
+    letter-spacing: 2px;
+}
+
+#nav ul {
+    list-style: none;
+    display: flex;
+}
+
+#nav ul li a {
+    font-family: var(--font-primary);
+    color: var(--bg-color);
+    font-size: 1.3em;
+    padding: 5px 12px;
+    border: 2px solid var(--primary-color);
+    transition: all 0.2s;
+    border-radius: 0;
+    text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+#nav ul li a:hover {
+    color: var(--accent-color);
+    background: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    padding: 15px 40px;
+    border-radius: 0;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: transform 0.1s;
+    border: var(--border-weight);
+    box-shadow: var(--shadow-pop);
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    transform: translate(5px, 5px); /* Move on press */
+    box-shadow: none;
+}
+
+/* Menu/Content Structure */
+.menu-category, .contact-item {
+    padding: 30px;
+    background: #ffffff;
+    border: var(--border-weight);
+    border-radius: 0;
+    box-shadow: 3px 3px 0 var(--secondary-color);
+}
+
+.menu-category h3 {
+    font-family: var(--font-primary);
+    color: var(--primary-color);
+    font-size: 2.5em;
+    -webkit-text-stroke: 1px var(--accent-color);
+    border-bottom: 1px dashed var(--accent-color);
+    padding-bottom: 10px;
+}
+
+.menu-item {
+    border-bottom: 2px dashed var(--accent-color);
+}
+
+.item-name {
+    color: var(--accent-color);
+    font-weight: 700;
+}
+.item-price {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Footer */
+#footer {
+    background: var(--accent-color);
+    color: var(--bg-color);
+    padding: 20px 0;
+    font-size: 1.1em;
+    border-top: 5px solid var(--primary-color);
+}
+
+
+

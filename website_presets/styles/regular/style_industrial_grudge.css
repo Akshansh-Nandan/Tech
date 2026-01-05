@@ -1,0 +1,153 @@
+/* ------------------------------------------------------------------- */
+/* Theme 07: Industrial Grunge - Rough, Metallic, Distressed */
+/* ------------------------------------------------------------------- */
+
+:root {
+    --bg-color: #4a4a4a; /* Muted Charcoal/Iron */
+    --primary-color: #f0f0f0; /* Off-White Text */
+    --secondary-color: #c0392b; /* Rusted Red Accent */
+    --accent-color: #e5e5e5; /* Light Metallic Gray */
+    --text-color: #dddddd;
+    --font-primary: 'Impact', 'Arial Black', sans-serif;
+    --font-secondary: 'Roboto Condensed', sans-serif;
+}
+
+body {
+    font-family: var(--font-secondary);
+    line-height: 1.5;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    scroll-behavior: smooth;
+    /* Simulate a concrete/metal texture */
+    background-image: url("https://placehold.co/1000x1000/3a3a3a/4a4a4a?text=METAL");
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+/* Utility & Layout */
+.container {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+section {
+    padding: 80px 0;
+    /* Heavy border separation */
+    border-bottom: 5px double var(--secondary-color);
+    background-color: rgba(74, 74, 74, 0.9); /* Semi-transparent to show texture */
+}
+
+/* Titles */
+.section-title {
+    font-family: var(--font-primary);
+    font-size: 4em;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 0 var(--secondary-color);
+    border-bottom: 3px solid var(--accent-color);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Header & Navigation */
+#header {
+    background: #333333;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    border-bottom: 5px solid var(--secondary-color);
+}
+
+.logo {
+    font-family: var(--font-primary);
+    font-size: 2.8em;
+    font-weight: 900;
+    color: var(--secondary-color);
+    letter-spacing: 1px;
+}
+
+#nav ul {
+    list-style: none;
+    display: flex;
+}
+
+#nav ul li a {
+    color: var(--text-color);
+    font-size: 1.2em;
+    padding: 10px 15px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+#nav ul li a:hover {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    background: rgba(192, 57, 43, 0.2);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 14px 40px;
+    border-radius: 0; /* Sharp, aggressive look */
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    border: 1px solid var(--primary-color);
+    box-shadow: 3px 3px 0 var(--accent-color);
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    box-shadow: none;
+    transform: translate(3px, 3px);
+}
+
+/* Menu/Content Structure */
+.menu-category, .contact-item {
+    padding: 35px;
+    background: rgba(51, 51, 51, 0.95);
+    border: 3px solid var(--accent-color);
+    border-radius: 0;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.menu-category h3 {
+    color: var(--secondary-color);
+    font-family: var(--font-primary);
+    font-size: 2.2em;
+    text-shadow: 1px 1px 0 var(--primary-color);
+}
+
+.menu-item {
+    border-bottom: 1px dashed var(--accent-color);
+}
+
+.item-name {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+.item-price {
+    color: var(--secondary-color);
+    font-weight: bold;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* Footer */
+#footer {
+    background: #333333;
+    color: var(--accent-color);
+    padding: 25px 0;
+    font-size: 0.9em;
+    border-top: 5px solid var(--secondary-color);
+}
+
+

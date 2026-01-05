@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard — Universal</title>
+
+<!-- Theme CSS (KEEP) -->
+<link rel="stylesheet" href="../../../styles/premium/style_quantum_flux_v2.css"> 
+<script src="../../../scripts/script.js"></script>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-secondary, sans-serif);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+header#header {
+    background-color: var(--header-bg);
+    backdrop-filter: blur(8px);
+    padding: 12px 20px;
+    border-bottom: 2px solid var(--primary-color);
+    color: var(--text-color);
+}
+
+header#header .logo { font-size: 1.6rem; font-weight: bold; }
+
+nav#nav ul {
+    list-style: none;
+    display: flex;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+nav#nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+nav#nav a:hover { color: var(--primary-color); }
+
+.dashboard-wrapper {
+    flex: 1;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.sidebar {
+    width: 240px;
+    background: var(--sidebar-bg);
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid var(--primary-color-translucent);
+    box-shadow: 0 8px 40px rgba(0,0,0,0.4), var(--glow-secondary);
+    flex-shrink: 0;
+    color: var(--text-color);
+}
+
+.sidebar h3 { color: var(--primary-color); margin-bottom: 16px; }
+
+.sidebar ul { list-style: none; padding: 0; }
+.sidebar ul li { margin-bottom: 12px; }
+.sidebar ul li a { color: var(--text-color); text-decoration: none; }
+.sidebar ul li a:hover { color: var(--primary-color); }
+
+.main-content {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 16px;
+    border: 1px solid var(--primary-color-translucent);
+    box-shadow: 0 8px 40px rgba(0,0,0,0.4), var(--glow-secondary);
+    transition: transform 0.15s, box-shadow 0.15s;
+    color: var(--text-color);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 50px rgba(0,0,0,0.5), var(--glow-primary);
+}
+
+.card h4 { margin: 0 0 12px 0; color: var(--primary-color); }
+.card p { margin: 0; font-size: 0.95rem; opacity: 0.85; }
+
+.progress-bar {
+    background: var(--progress-bg);
+    border-radius: 8px;
+    height: 12px;
+    overflow: hidden;
+    margin-top: 8px;
+}
+
+.progress-bar-inner {
+    height: 100%;
+    width: 0%;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    transition: width 0.5s ease;
+}
+
+footer#footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--footer-bg);
+    border-top: 2px solid var(--primary-color);
+    margin-top: auto;
+    color: var(--text-color);
+}
+</style>
+</head>
+<body>
+
+<header id="header">
+    <div class="container" style="display:flex; align-items:center; justify-content:space-between;">
+        <div class="logo">QuantumFlux Dashboard</div>
+        <nav id="nav">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="#settings">Settings</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#logout">Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="dashboard-wrapper">
+    <aside class="sidebar">
+        <h3>Navigation</h3>
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#analytics">Analytics</a></li>
+            <li><a href="#reports">Reports</a></li>
+            <li><a href="#settings">Settings</a></li>
+        </ul>
+    </aside>
+
+    <div class="main-content">
+        <div class="card">
+            <h4>Users</h4>
+            <p>Active Users: <span id="active-users">0</span></p>
+            <p>New Signups: <span id="new-signups">0</span></p>
+            <div class="progress-bar">
+                <div class="progress-bar-inner" id="users-progress"></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h4>Sales</h4>
+            <p>Revenue: $<span id="revenue">0</span></p>
+            <p>Orders Today: <span id="orders">0</span></p>
+            <div class="progress-bar">
+                <div class="progress-bar-inner" id="sales-progress"></div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h4>Traffic Sources</h4>
+            <canvas id="pieChart"></canvas>
+        </div>
+
+        <div class="card">
+            <h4>Monthly Revenue</h4>
+            <canvas id="barChart"></canvas>
+        </div>
+
+        <div class="card">
+            <h4>Revenue Over Time</h4>
+            <canvas id="lineChart"></canvas>
+        </div>
+    </div>
+</div>
+
+<footer id="footer">
+    <div class="container">
+        <p>&copy; 2025 QuantumFlux Inc. | All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const activeUsers = 1245;
+    const newSignups = 54;
+    const revenue = 23500;
+    const orders = 72;
+
+    document.getElementById('active-users').textContent = activeUsers;
+    document.getElementById('new-signups').textContent = newSignups;
+    document.getElementById('revenue').textContent = revenue.toLocaleString();
+    document.getElementById('orders').textContent = orders;
+
+    document.getElementById('users-progress').style.width = '80%';
+    document.getElementById('sales-progress').style.width = '60%';
+
+    const chartColors = {
+        primary: getComputedStyle(document.documentElement).getPropertyValue('--primary-color').trim(),
+        text: getComputedStyle(document.documentElement).getPropertyValue('--text-color').trim()
+    };
+
+    new Chart(document.getElementById('pieChart'), {
+        type: 'pie',
+        data: {
+            labels: ['Direct', 'Referral', 'Social', 'Other'],
+            datasets: [{
+                data: [45, 25, 20, 10],
+                backgroundColor: [
+                    chartColors.primary,
+                    'rgba(107,75,255,0.7)',
+                    'rgba(107,75,255,0.5)',
+                    'rgba(107,75,255,0.3)'
+                ]
+            }]
+        },
+        options: { plugins: { legend: { labels: { color: chartColors.text } } } }
+    });
+
+    new Chart(document.getElementById('barChart'), {
+        type: 'bar',
+        data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+            datasets: [{ label: 'Revenue ($)', data: [5000,7000,8000,6000,9000,10000], backgroundColor: chartColors.primary }]
+        },
+        options: {
+            plugins: { legend: { labels: { color: chartColors.text } } },
+            scales: { x: { ticks: { color: chartColors.text } }, y: { ticks: { color: chartColors.text } } }
+        }
+    });
+
+    new Chart(document.getElementById('lineChart'), {
+        type: 'line',
+        data: {
+            labels: ['Week 1','Week 2','Week 3','Week 4'],
+            datasets: [{
+                label: 'Revenue Trend',
+                data: [4000, 5500, 6000, 7200],
+                borderColor: chartColors.primary,
+                backgroundColor: chartColors.primary + '33',
+                fill: true,
+                tension: 0.3
+            }]
+        },
+        options: {
+            plugins: { legend: { labels: { color: chartColors.text } } },
+            scales: { x: { ticks: { color: chartColors.text } }, y: { ticks: { color: chartColors.text } } }
+        }
+    });
+});
+</script>
+
+</body>
+</html>
+
+
+
