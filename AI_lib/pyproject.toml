@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aidk_framework"
+version = "1.0.6"
+description = "Artificial Intelligence Development Kit (AIDK) – unified, production-grade AI framework"
+readme = "README.md"
+requires-python = "==3.10.*"
+license = { file = "LICENSE.md" }
+
+authors = [
+  { name = "Akshansh Nandan", email = "microcodehack@gmail.com" }
+]
+
+keywords = [
+  "artificial-intelligence",
+  "machine-learning",
+  "deep-learning",
+  "neural-networks",
+  "transformers",
+  "meta-learning"
+]
+
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Operating System :: POSIX :: Linux",
+  "License :: Other/Proprietary License"
+]
+
+[project.urls]
+Homepage = "https://github.com/Akshansh-Nandan/Tech/tree/AI/AI_lib"
+Documentation = "https://github.com/Akshansh-Nandan/Tech/tree/AI/AI_lib"
+Source = "https://github.com/Akshansh-Nandan/Tech/tree/AI/AI_lib"
+
+
+
