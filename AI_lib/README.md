@@ -2,7 +2,7 @@
 
 **Version:** 1.0  
 **Author:** Akshansh Nandan  
-**License:** [AIDK Protected Commercial Source License](LICENSE.md)
+**License:** [GPLv3](LICENSE.md)
 
 ---
 
@@ -161,6 +161,7 @@ This ensures you get the best of both worlds: flexibility during experimentation
 ## ADDITIONAL NOTE
 
 The transformer module of the AIDK is still missing 3 features (toggle meta-learning, preference training function, and RL training). These are still under development and will be released shortly.
+
 
 
 
