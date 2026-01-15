@@ -156,6 +156,13 @@ AIDK is **not intended to replace core libraries** like PyTorch or TensorFlow—
 
 This ensures you get the best of both worlds: flexibility during experimentation and reliability in production.
 
+---
+
+## ADDITIONAL NOTE
+
+The transformer module of the AIDK is still missing 3 features (toggle meta-learning, preference training function, and RL training). These are still under development and will be released shortly.
+
+
 
 
 
